@@ -208,6 +208,9 @@ require('lazy').setup({
     'ThePrimeagen/harpoon',
     dependencies = { 'nvim-lua/plenary.nvim' },
   },
+  {
+    'tpope/vim-fugitive'
+  }
 }, {})
 
 -- [[ Setting options ]]
@@ -374,6 +377,9 @@ require('nvim-treesitter.configs').setup {
     },
   },
 }
+
+-- [[Configure Fugitive]]
+vim.keymap.set('n', '<leader>gs', vim.cmd.Git)
 
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous diagnostic message' })
